@@ -1,0 +1,44 @@
+.icon_slide { font-size: 40px; padding-left: 8px; padding-right: 8px;} 
+.titleSegment { font-size: 10px; }
+.iconSegment { font-size: 18px; }
+.card-1 { margin-top: -5px; }
+.icon_menu { font-size: 40px; }
+.logo_slide { margin-top: -5px; width: 90px; }
+ion-title { font-size: 14px; font-weight: bold; }
+.id_orden { float: right;}
+.status { font-weight: bold; color: #C69E34 ;}
+ion-item { padding-bottom: 5px; }
+ion-segment { --background: #ffff; }
+ion-grid { background: #ffff; }
+ion-slides { --bullet-background-active: #3874ba; background-color: #ffff; } 
+.item_end { margin-right: 5px; }
+.footer { margin-bottom: -8px; }
+
+ion-card {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+// background-image: linear-gradient( #59A9F3, #3874ba) }
+
+.btn-grad {background-image: linear-gradient(to right, #4185d3 0%, #59A9F3  51%, #59A9F3  100%)}
+.btn-grad {
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 10px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+ .btn-grad:hover {
+   background-position: right center;
+   color: #fff;
+   text-decoration: none;
+ }
+

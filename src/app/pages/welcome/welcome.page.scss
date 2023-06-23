@@ -1,0 +1,31 @@
+ion-slides { height: 75%; --bullet-background-active: #59A9F3; }
+ion-toolbar { --background: transparent!important; }
+.header_wel { width: 190px; }
+.wel_escp { height: 50px; }
+.wel_escp1 { height: 20px; }
+h1 { font-size: 28px; font-weight: bolder; color: #353432; }
+.img_slide { width: 300px; }
+.logo_slide { width: 200px; }
+p { font-size: 14px; }
+ion-fotter { height: 5%; }
+.lottie { margin-top: -75px; }
+.slider-pager-page { color: white !important; }
+
+.caja_2 {
+    background-image: linear-gradient( #59A9F3, #3874ba);
+    border-radius: 90% / 0 0 60% 60%;
+    height: 20%;
+    --background: transparent!important;
+    color: #59A9F3;
+}
+
+// GALAXY S5
+@media screen and (max-device-width: 420px) and (max-device-height: 800px) and (-webkit-device-pixel-ratio: 3){
+    .caja_2 { height: 20%;}
+    .header_wel { width: 140px;}
+    .bienvenido { margin-top: -10px; position: relative;}
+    ion-fotter { height: 0%;}
+    .lottie { margin-top: -120px;}
+}
+
+

@@ -1,0 +1,43 @@
+
+.img_login, .footer, .cajaprecio2  { background-image: linear-gradient( #59A9F3, #3874ba) ; }
+.wel_escp { height: 50px; }
+ion-card  { margin-top: -30px; }
+.logo_slide { margin-top: -5px; width: 90px; }
+
+b { color: #fff; }
+.thumbnail {
+    text-align: -webkit-center;
+    ion-thumbnail {
+        position: relative;
+        --size: 130px;
+        min-width: 4rem;
+        min-height: 4rem;
+        --border-radius: 100px;
+        padding: 5px;
+        img {
+            border-radius: 100px;
+        }
+    }
+    ion-thumbnail::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 20px;
+        padding: 3px;
+
+    }
+    ion-fab {
+        margin: 0 -10px -8px 10px;
+        width: 30px;
+        height: 30px;
+        ion-fab-button {
+            width: 40px;
+            height: 40px;
+            --background: linear-gradient(to bottom, #59A9F3, #3874ba, #3874ba, #59A9F3, #59A9F3, #59A9F3, #59A9F3);
+        }
+    }
+}
+

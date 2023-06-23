@@ -1,0 +1,28 @@
+
+.img_login, .footer, .cajaprecio2 { --background: #59A9F3; background-image: linear-gradient( #59A9F3, #3874ba) }
+
+.cajaprecio2 { height: 170px; }
+.btn_lng { margin: 5px; padding: 5px; }
+.btn_register { margin-top: 10px; }
+.logo_slide { padding-top: 15px; width: 175px; }
+ion-card { margin-top: -30px; }
+.recordar, .version { font-size: 14px; color: #353432; }
+ion-footer { --background-color: transparent!important; --background: transparent!important; }
+.b { color: #ffff; font-weight: bold; }
+
+// IPHONE 5S
+// @media screen and (device-width: 320px) and (device-height: 568px) {
+//     .caja_2 { height: 18%;}
+//     .header_wel { width: 120px; margin-top: -8px;}
+//     .bienvenido { margin-top: -60px; position: relative;}
+//     ion-fotter { height: 0%;}
+//     .descrp {  margin-top: -10px; font-size: 12px;}
+//     .lottie { margin-top: -100px;}
+// }
+
+// GALAXY S5
+@media screen and (max-device-width: 420px) and (max-device-height: 800px) and (-webkit-device-pixel-ratio: 3){
+    .cajaprecio2 { height: 100px;}
+    .logo_slide { width: 150px; margin-top: -20px;}
+}
+

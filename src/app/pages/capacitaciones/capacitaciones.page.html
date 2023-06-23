@@ -1,0 +1,103 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="footer">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <div class="center">
+      <img  class="logo_slide" src="assets/img/logo_ierp_3.png" alt="">
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+
+  <div >
+
+
+    <ion-segment [(ngModel)]="selectedSegment">
+      <ion-segment-button value="option1">
+        Todos los cursos
+      </ion-segment-button>
+      <ion-segment-button value="option2">
+        Mis cursos
+      </ion-segment-button>
+    </ion-segment>
+    
+
+
+    <div [ngSwitch]="selectedSegment">
+      <div *ngSwitchCase="'option1'" style="text-align: center; justify-content: center;">
+        <!-- Contenido para la opción 1 -->
+        <ion-row *ngFor="let data of data"   style="margin: 10px; padding: 10px;" class="center">
+          <ion-col>
+            <img [src]="IMG+data.imagen" alt="">
+          </ion-col>
+
+          <ion-col>
+            <ion-button color="warning" *ngIf="data.tipo === 'Capacitación'" (click)="openDetails(data)" style="font-size: 10px;">  {{data.tipo}} </ion-button>
+            <ion-button color="primary" *ngIf="data.tipo === 'Curso'" (click)="irCuro(data)" style="font-size: 10px;"> <ion-icon name="book-outline" style="font-size: 10px;"></ion-icon> &nbsp;{{data.tipo}} Inscribirse</ion-button>
+            <p style="font-weight: bold; font-size: 10px;" text-wrap>{{data.nombre.substr(0, 22)}}</p>
+          </ion-col>
+          <!-- <ion-label style="text-align: start; padding-left: 5px;">
+            
+          </ion-label> -->
+        </ion-row>
+
+      </div>
+      <div *ngSwitchCase="'option2'">
+        <!-- Contenido para la opción 2 -->
+        <div *ngIf="dataMisCuros.length == 0">
+          <div class="row pt-4 text-center" style="text-align: center;">
+            <div class="col-12" style="text-align: center;">
+              <ion-icon style="color: #3d3f3e; font-size: 60px;" name="cart-outline"></ion-icon>
+                <p style="color: #3d3f3e;">Aun no tienes cursos inscritos</p>
+            </div>
+          </div>
+        </div>
+      
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6" *ngFor="let data1 of dataMisCuros">
+              <ion-item style="padding: 0px;">
+                <ion-label style="text-align: start; padding-left: 5px;"  >
+                  <!-- <ion-button color="warning" *ngIf="data.tipo === 'Capacitación'" (click)="openDetails(data)" style="font-size: 10px;">  {{data.tipo}} </ion-button>
+                  <ion-button color="primary" *ngIf="data.tipo === 'Curso'" (click)="irCuro(data)" style="font-size: 10px;"> <ion-icon name="book-outline" style="font-size: 10px;"></ion-icon> &nbsp;{{data.tipo}} Inscribirse</ion-button> -->
+                  <h5 style="font-weight: bold; font-size: 10px;" text-wrap>{{data1.nombre}}</h5>
+                  <img [src]="IMG+data1.imagen" alt="" (click)="openDetails(data1)" >
+                  <p class="text-wrap" style="font-weight: 1px;">{{data1.descripcion.substr(0, 20)}} ...</p>
+            
+                  <!-- <a target="_blank" [href]='REC+data.recursos' style="font-size: 10px;"> <ion-icon class="folder" name="folder-open"></ion-icon> {{data.recursos}}</a> -->
+                  <small>Fecha Inicio: {{data1.fecha_inicio | date: 'dd/MM/yyyy   HH:mm:ss'}}</small> <br>
+                  <small>Fecha Fin: {{data1.fecha_fin | date: 'dd/MM/yyyy   HH:mm:ss'}}</small> <br>
+                  <small>Duración: {{data1.duracion}} Dias</small> <br>
+                  <!-- <small>Capacitadora: {{data.usuario_id}}</small> -->
+      
+                  <div class="text-center">
+                    <ion-button type="button" color="primary" (click)="openDetails(data1)"><ion-icon name="eye"></ion-icon></ion-button>
+                    <ion-button type="button" color="danger" (click)="quitarCurso(data1)"><ion-icon name="close-circle"></ion-icon></ion-button>
+                  </div>
+      
+                </ion-label>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </div>
+    </div>
+
+
+
+
+  
+
+</div>
+
+
+</ion-content>

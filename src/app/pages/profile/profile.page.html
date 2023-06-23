@@ -1,0 +1,115 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="footer">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <div class="center">
+      <img  class="logo_slide" src="assets/img/logo_ierp_3.png" alt="">
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <form id="loginform" 
+    [formGroup]="registerForm"  
+     autocomplete="off"  
+    (ngSubmit)="actualizarInformacion()">  
+
+  <div  class="cajaprecio2" style="height: 210px;margin-top: -2%;padding-bottom: 35%;">
+    <div class=" center" style="padding-top: 10px;">
+      <ion-col class="thumbnail" >
+        <ion-fab vertical="bottom" horizontal="right">
+            <ion-fab-button (click)="openOption()">
+              <ion-icon name="camera"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+          <ion-thumbnail>
+            <ion-img  src="{{noimgUrl}}" *ngIf="!imgUrl"></ion-img>
+            <ion-img src="{{imgUrl}}" *ngIf="imgUrl"></ion-img>
+          </ion-thumbnail>
+          <ion-input style="display: none!important;"  type="text"  class="form-control"  formControlName="foto" name="foto" [(ngModel)]="imgUrl" ></ion-input>
+      </ion-col>
+    </div>
+  </div>
+
+
+  <!-- <ion-col size="2" >
+    <img (click)="getCamera()" src="{{noimgUrl}}" height="30" width="30" alt="" *ngIf="!imgUrl">
+    <img src="{{imgUrl}}" height="30" width="30" alt="" *ngIf="imgUrl">
+    <ion-input style="display: none!important;"  type="text"  class="form-control"   name="foto" [(ngModel)]="imgUrl" ></ion-input>
+</ion-col> -->
+
+
+  <ion-card mode="ios">
+
+    
+
+
+    <ion-row>
+      <ion-col>
+        <ion-item >
+          <ion-label position="stacked">Nombres</ion-label>
+          <ion-input placeholder="Ingresar nombres" name="no_nombres" formControlName="nombre"></ion-input>
+          <!-- <ion-icon name="person-outline" slot="end" class="top_icon" color="medium"></ion-icon> -->
+        </ion-item>
+      </ion-col>
+
+
+      <ion-col>
+        <ion-item >
+          <ion-label position="stacked">Apellidos</ion-label>
+          <ion-input placeholder="Ingresar apellidos" name="no_nombres" formControlName="apellidos"></ion-input>
+          <!-- <ion-icon name="person-outline" slot="end" class="top_icon" color="medium"></ion-icon> -->
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+    
+
+    
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Celular</ion-label>
+          <ion-input placeholder="Ingresar documento" name="documento" formControlName="celular"></ion-input>
+        </ion-item>
+      </ion-col>
+      
+      <ion-col>
+        <ion-item >
+          <ion-label position="stacked">DNI</ion-label>
+          <ion-input placeholder="Ingresar nombres" name="no_nombres" formControlName="dni" readonly></ion-input>
+          <!-- <ion-icon name="person-outline" slot="end" class="top_icon" color="medium"></ion-icon> -->
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    
+
+
+    <ion-item>
+      <ion-label position="stacked">Correo</ion-label>
+      <ion-input placeholder="Ingresar celular" name="celular" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-row padding>
+      <ion-col>
+        <ion-button type="submit" expand="block" fill="solid" color="primary" ><b>Actualizar</b></ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-card>
+
+
+</form>
+  
+
+</ion-content>

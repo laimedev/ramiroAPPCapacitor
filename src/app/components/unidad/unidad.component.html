@@ -1,0 +1,66 @@
+
+
+
+
+<ion-content class="center" >
+  <div style="margin: 30px;">
+    <h5 color="primary" style="font-weight: bolder;">{{data.nombre}}</h5>
+
+    <div class="center">
+      <!-- <ng-lottie [options]="options" width="150px"
+    height="150px"></ng-lottie> -->
+    <img [src]="IMG+data.imagen" alt="">
+    </div>
+  
+    <br>
+  
+    <p>
+      {{data.descripcion}}
+    </p>
+
+    <small>Duración: {{data.duracion}} dias</small><br>
+    <small>Fecha Inicio: {{data.fecha_inicio | date: 'dd/MM/yyyy   HH:mm:ss'}}</small><br>
+    <small>Fecha Fin: {{data.fecha_fin | date: 'dd/MM/yyyy   HH:mm:ss'}}</small><br>
+    <!-- <small>Capacitadora: {{data.usuario_id}}</small> <br> -->
+
+    <!-- <ion-icon class="folder" name="folder-open"></ion-icon>
+    <br>
+    <a target="_blank" [href]='REC+data.recursos' style="font-size: 12px;">{{data.recursos}}</a> <br>
+    <br> -->
+
+   
+    <div *ngIf="unidad">
+      <h4>Unidades:</h4>
+
+
+      <div class="row">
+        <div class="col-12 " *ngFor="let data2 of unidad">
+          <div class="card-item">
+
+            <small style="font-weight: bold;">{{data2.nombre}}</small><br>
+            <!-- <small>Asistencia: {{data.asistencia}}</small><br> -->
+            <small>Meet:  <a target="_blank" [href]="data.meet">{{data2.meet}}</a></small><br>
+            <!-- <small>Tarea: {{data2.tarea}}</small><br> -->
+
+
+            
+            <a target="_blank" [href]='UNI+data.material' style="font-size: 12px;"> <ion-icon class="folder" name="folder-open"></ion-icon> {{data2.material}}</a> <br>
+
+            <ion-button size="small"  *ngIf="data.tipo !== 'INTRODUCCION'" color="success" (click)="irSesiones(data2)"><ion-icon name="checkbox-outline"></ion-icon> &nbsp; Ir prueba</ion-button>
+          </div>
+
+          <!-- <ion-button color="waning" *ngIf="!data.tipo == INTRODUCCION"> </ion-button> -->
+          <br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+
+</ion-content>
+
+
+<ion-footer style="padding: 20px;">
+  <ion-button color="primary" expand="block" (click)="dismiss()">Volver</ion-button>
+</ion-footer>

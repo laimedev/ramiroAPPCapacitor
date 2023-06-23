@@ -1,0 +1,45 @@
+<ion-content >
+  <div class="caja_2">
+    <ion-toolbar slot="end" >
+      <ion-buttons slot="end"   >
+        <ion-button fill="outline" color="light" (click)="uiService.irA('/login')" fill="clear">Saltar <ion-icon name="chevron-forward-outline" slot="end"></ion-icon></ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <div class="center">
+      <img  class="header_wel animated flip" src="assets/img/logo_ierp_2.png">
+    </div>
+  </div>
+
+
+
+  <ion-grid>
+    <div class="center lottie">
+      <!-- <ng-lottie [options]="options" width="250px"
+    height="300px"></ng-lottie> -->
+    </div>
+    <br><br><br><br>
+    <div style="text-align: center; padding-top: 20px;">
+      <img src="assets/lottie/profesora.gif" style="width: 200px;">
+    </div>
+    <ion-row  class="center bienvenido">
+      <h1>Bienvenido</h1>
+    </ion-row>
+    <ion-row class="center ">
+      <p class="descrp">RAMIRO PRIALE es una institución  <br> educativa de alta calidad.</p>
+    </ion-row>
+
+
+    <ion-row  class="center">
+      <ion-col>
+        <ion-button mode="ios" class="btn_register" fill="solid"  color="primary" expand="block" (click)="uiService.irA('login')"> <b style="color: #fff;">Comenzar</b> </ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+
+
+
+</ion-content>
+<ion-footer>
+</ion-footer>

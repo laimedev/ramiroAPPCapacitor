@@ -1,0 +1,72 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="footer">
+  <ion-buttons slot="start">
+    <ion-button fill="clean" (click)="uiService.irA('welcome')"> <ion-icon color="light" name="chevron-back-outline"></ion-icon> </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div  class="cajaprecio2">
+    <div class=" center">
+      <img  class="logo_slide animated flip" src="assets/img/logo_ierp_2.png" alt="">
+      <!-- <img  class="logo_slide animated flip" src="assets/img/logo_ierp.png" alt=""> -->
+    </div>
+  </div>
+
+      <form id="loginform" 
+        [formGroup]="registerForm"  
+         autocomplete="off"  
+        (ngSubmit)="login()"  >
+
+        <ion-card mode="ios">
+         
+
+      
+          
+          <ion-item style="margin-top: 12px;">
+            <ion-label position="stacked">Documento Identidad</ion-label>
+            <ion-input  type="text" placeholder="Ingresar # documento" name="user" maxlength="8" formControlName="dni" (ionFocus)="checkFocus()" (ionBlur)="checkBlur()"></ion-input>
+            <ion-icon name="card-outline" slot="end" class="top_icon" color="medium"></ion-icon>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input name="password" [type]="showPassword ? 'text' : 'password'" placeholder="************" name="pass" formControlName="password" (ionFocus)="checkFocus()" (ionBlur)="checkBlur()"></ion-input>
+            <ion-icon  color="medium" slot="end" class="top_icon" [name]="passwordToggleIcon" (click)="togglePassword()" ></ion-icon>
+          </ion-item>
+
+
+
+
+
+          <ion-row>
+            <ion-col class="btn_lng">
+              <ion-button   color="primary" type="submit"  class="btn_login" fill="solid"  expand="block"> <ion-icon color="light" name="lock-open-outline" slot="start"></ion-icon> <b class="b">Ingresar</b> </ion-button>
+              <ion-button   color="primary" class="btn_register" fill="outline" expand="block" (click)="irRegister()"> <ion-icon name="person-add-outline" slot="start" color="dark"></ion-icon> <ion-label style="color: #353432;">Registrarme</ion-label> </ion-button>
+            </ion-col>
+          </ion-row>
+        
+          <ion-col class="center">
+            <p>Olvidaes tu contraseña? <b (click)="uiService.irA('forgot')" >Recuperar aquí.</b></p>
+          </ion-col>
+
+        </ion-card>
+
+      </form>
+
+
+
+</ion-content>
+
+
+
+
+<ion-footer class="ion-no-border" [hidden]="isShown">
+  <ion-toolbar class="center">
+    <p class="version">Version 0.0.1</p>
+  </ion-toolbar>
+</ion-footer>
+
+

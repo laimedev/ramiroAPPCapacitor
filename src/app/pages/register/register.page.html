@@ -1,0 +1,129 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clean" (click)="irHome()"> <ion-icon color="light" name="chevron-back-outline"></ion-icon> </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+      <div  class="cajaprecio2">
+        <div class=" center" >
+          <img  class="logo_slide animated flip" src="assets/img/logo_ierp_2.png" alt="">
+        </div>
+      </div>
+
+
+
+
+      <ion-card mode="ios">
+
+        <form id="loginform" 
+        [formGroup]="registerForm"  
+         autocomplete="off"  
+        (ngSubmit)="crearUsuario()">
+
+
+      
+        
+        
+  
+
+        
+
+        
+
+
+
+
+          <ion-item >
+            <ion-label position="stacked">Nombres y Apellidos</ion-label>
+            <ion-input placeholder="Ingresar nombres" name="no_nombres" formControlName="nombre"></ion-input>
+            <ion-icon name="person-outline" slot="end" class="top_icon" color="medium"></ion-icon>
+          </ion-item>
+        
+        <!-- <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="stacked">Apellido Paterno</ion-label>
+              <ion-input placeholder="Ingresar apellido" name="no_apepat" formControlName="apellido_p"></ion-input>
+            </ion-item>
+          </ion-col>
+          
+          <ion-col>
+            <ion-item>
+              <ion-label position="stacked">Apellido Materno</ion-label>
+              <ion-input placeholder="Ingresar apellido" name="no_apemat" formControlName="apellido_m"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row> -->
+
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="stacked">DNI</ion-label>
+              <ion-input placeholder="Ingresar documento" name="documento" formControlName="dni"></ion-input>
+            </ion-item>
+          </ion-col>
+          
+          <ion-col>
+            <ion-item>
+              <ion-label position="stacked">Celular</ion-label>
+              <ion-input placeholder="Ingresar celular" name="celular" formControlName="celular"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-item>
+          <ion-label position="stacked">Correo electronico</ion-label>
+          <ion-input placeholder="Ingresar correo electronico" name="email" formControlName="email" ></ion-input>
+          <ion-icon name="mail-outline" slot="end" class="top_icon" color="medium"></ion-icon>
+        </ion-item>
+        
+
+
+        <ion-item>
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input  name="password" [type]="showPassword ? 'text' : 'password'" formControlName="password_show" placeholder="************"></ion-input>
+          <ion-icon  color="medium" slot="end" style="margin-top: 40px;" [name]="passwordToggleIcon" (click)="togglePassword()" ></ion-icon>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Confirme la contraseña</ion-label>
+          <ion-input  name="password" [type]="showPassword2 ? 'text' : 'password'" formControlName="password_show_confirm" placeholder="************"></ion-input>
+          <ion-icon  color="medium" slot="end" style="margin-top: 40px;" [name]="passwordToggleIcon2" (click)="togglePassword2()" ></ion-icon>
+        </ion-item>
+
+        <ion-row class="center">
+          <ion-item class="ion-no-border" lines="none"> 
+            <ion-label class="terminos">Aceptar los termino y condiciones</ion-label>
+            <ion-checkbox mode="md" color="primary"  slot="start" formControlName="terminos" ></ion-checkbox>
+          </ion-item>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-button   type="submit" fill="solid" color="primary" expand="block" > <ion-icon color="light" name="person-add-outline" slot="start"></ion-icon> <b class="b">Registrarme</b> </ion-button>
+            <!-- <ion-button   (click)="codeMail()" fill="solid" color="warning" expand="block" > <ion-icon color="light" name="person-add-outline" slot="start"></ion-icon> <b class="b">Registrarme</b> </ion-button> -->
+          </ion-col>
+        </ion-row>
+
+    </form>
+
+        <ion-col class="center">
+          <p (click)="uiService.irA('login')">Ya tengo cuenta. <b>Ingresar aquí.</b></p>
+        </ion-col>
+
+
+
+        
+      </ion-card>
+
+</ion-content>
+
+

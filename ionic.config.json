@@ -1,0 +1,7 @@
+{
+  "name": "RamiroAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

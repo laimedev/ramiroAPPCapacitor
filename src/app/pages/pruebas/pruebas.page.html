@@ -1,0 +1,429 @@
+<ion-header>
+  <ion-toolbar class="footer">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <div class="center">
+      <img  class="logo_slide" src="assets/img/logo_ierp_3.png" alt="">
+    </div>
+    <ion-buttons slot="end">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+<ion-content class="padding">
+
+  <div class="text-center pt-3" style="text-align: center;">
+    <p> <b>{{prueba.tituloPrueba}}  </b> </p>
+    <p>{{prueba.descripcionPrueba}}</p>
+  </div>
+  
+
+
+
+  <div *ngFor="let pre1 of pre1" class="card_pregunta">
+    <p class="title_pregunta"> <b> 1). </b>  {{pre1.title}}</p>
+  
+    <ion-radio-group value="grape" (ionChange)="checkValue($event)">
+      <ion-item>
+        <small>{{pre1.p1}}</small>
+        <ion-radio slot="end" color="dark" value="{{pre1.p1}}"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <small>{{pre1.p2}}</small>
+        <ion-radio slot="end" color="dark" value="{{pre1.p2}}"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <small>{{pre1.p3}}</small>
+        <ion-radio slot="end" color="dark" value="{{pre1.p3}}"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <small>{{pre1.p4}}</small>
+        <ion-radio slot="end" color="dark" value="{{pre1.p4}}"></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+
+    <br>
+
+
+
+    <!-- <small style="color: green;" *ngIf="correcto">Respuesta Correcta</small>
+    <small style="color: red;" *ngIf="!correcto">Respuesta Incorrecta</small>
+     -->
+
+
+  </div>
+
+
+
+
+
+
+
+  <div *ngFor="let pre2 of pre2" class="card_pregunta">
+    <p class="title_pregunta"><b> 2). </b>  {{pre2.title}}</p>
+
+    <ion-radio-group value="grape"  (ionChange)="checkValue2($event)">
+      <ion-item>
+        <small>{{pre2.p1}}</small>
+        <ion-radio slot="end" color="dark" value="{{pre2.p1}}"></ion-radio>
+      </ion-item>
+
+    
+
+      <ion-item>
+        <small>{{pre2.p2}}</small>
+        <ion-radio slot="end" color="dark" value="{{pre2.p2}}"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <small>{{pre2.p3}}</small>
+        <ion-radio slot="end" color="dark" value="{{pre2.p3}}"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <small>{{pre2.p4}}</small>
+        <ion-radio slot="end" color="dark" value="{{pre2.p4}}"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+
+    <!-- <br>
+      <small style="color: green;" *ngIf="correcto2">Respuesta Correcta</small>
+      <small style="color: red;" *ngIf="!correcto2">Respuesta Incorrecta</small> -->
+    
+</div>
+
+
+
+<br>
+
+
+
+<div *ngFor="let pre3 of pre3" class="card_pregunta">
+  <p class="title_pregunta"><b> 3). </b>  {{pre3.title}}</p>
+
+  <ion-radio-group value="grape"  (ionChange)="checkValue3($event)">
+    <ion-item>
+      <small>{{pre3.p1}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre3.p1}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre3.p2}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre3.p2}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre3.p3}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre3.p3}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre3.p4}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre3.p4}}"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+  <!-- <br>
+    <small style="color: green;" *ngIf="correcto3">Respuesta Correcta</small>
+    <small style="color: red;" *ngIf="!correcto3">Respuesta Incorrecta</small> -->
+  
+</div>
+
+
+
+
+<br>
+
+
+
+<div *ngFor="let pre4 of pre4" class="card_pregunta">
+  
+  <p class="title_pregunta"> <b> 4). </b> {{pre4.title}}</p>
+
+  <ion-radio-group value="grape"  (ionChange)="checkValue4($event)" >
+    <ion-item>
+      <small>{{pre4.p1}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre4.p1}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre4.p2}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre4.p2}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre4.p3}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre4.p3}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre4.p4}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre4.p4}}"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+  <!-- <br>
+    <small style="color: green;" *ngIf="correcto4">Respuesta Correcta</small>
+    <small style="color: red;" *ngIf="!correcto4">Respuesta Incorrecta</small> -->
+  
+</div>
+
+
+
+
+<br>
+
+
+
+<div *ngFor="let pre5 of pre5" class="card_pregunta">
+  <p class="title_pregunta"> <b> 5). </b>  {{pre5.title}}</p>
+
+  <ion-radio-group value="grape"  (ionChange)="checkValue5($event)" >
+    <ion-item>
+      <small>{{pre5.p1}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre5.p1}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre5.p2}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre5.p2}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre5.p3}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre5.p3}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre5.p4}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre5.p4}}"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+  <!-- <br>
+    <small style="color: green;" *ngIf="correcto5">Respuesta Correcta</small>
+    <small style="color: red;" *ngIf="!correcto5">Respuesta Incorrecta</small> -->
+  
+</div>
+
+
+
+
+<br>
+
+
+
+<div *ngFor="let pre6 of pre6" class="card_pregunta">
+  <p class="title_pregunta"><b> 6). </b> {{pre6.title}}</p>
+
+  <ion-radio-group value="grape"  (ionChange)="checkValue6($event)" >
+    <ion-item>
+      <small>{{pre6.p1}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre6.p1}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre6.p2}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre6.p2}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre6.p3}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre6.p3}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre6.p4}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre6.p4}}"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+  <!-- <br>
+    <small style="color: green;" *ngIf="correcto6">Respuesta Correcta</small>
+    <small style="color: red;" *ngIf="!correcto6">Respuesta Incorrecta</small>
+   -->
+</div>
+
+
+
+
+<br>
+
+
+
+<div *ngFor="let pre7 of pre7" class="card_pregunta">
+  <p class="title_pregunta"><b> 7). </b> {{pre7.title}}</p>
+
+  <ion-radio-group value="grape"  (ionChange)="checkValue7($event)" >
+    <ion-item>
+      <small>{{pre7.p1}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre7.p1}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre7.p2}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre7.p2}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre7.p3}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre7.p3}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre7.p4}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre7.p4}}"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+  <!-- <br>
+    <small style="color: green;" *ngIf="correcto7">Respuesta Correcta</small>
+    <small style="color: red;" *ngIf="!correcto7">Respuesta Incorrecta</small>
+   -->
+</div>
+
+
+
+<br>
+
+
+
+<div *ngFor="let pre8 of pre8"  class="card_pregunta">
+  <br>
+    <img src="{{pre8.img}}" alt="">
+  <p class="title_pregunta"><b> 8). </b>  {{pre8.title}}</p>
+
+  <ion-radio-group value="grape"  (ionChange)="checkValue8($event)">
+    <ion-item>
+      <small>{{pre8.p1}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre8.p1}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre8.p2}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre8.p2}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre8.p3}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre8.p3}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre8.p4}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre8.p4}}"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+  <!-- <br>
+    <small style="color: green;" *ngIf="correcto8">Respuesta Correcta</small>
+    <small style="color: red;" *ngIf="!correcto8">Respuesta Incorrecta</small> -->
+  
+</div>
+
+
+
+<br>
+
+
+
+<div *ngFor="let pre9 of pre9" class="card_pregunta">
+  <br>
+    <img src="{{pre9.img}}" alt="">
+  <p class="title_pregunta"><b> 9). </b>  {{pre9.title}}</p>
+
+  <ion-radio-group value="grape"  (ionChange)="checkValue9($event)" >
+    <ion-item>
+      <small>{{pre9.p1}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre9.p1}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre9.p2}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre9.p2}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre9.p3}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre9.p3}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre9.p4}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre9.p4}}"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+  <!-- <br>
+    <small style="color: green;" *ngIf="correcto9">Respuesta Correcta</small>
+    <small style="color: red;" *ngIf="!correcto9">Respuesta Incorrecta</small> -->
+  
+</div>
+
+
+
+<br>
+
+
+
+<div *ngFor="let pre10 of pre10" class="card_pregunta">
+  <br>
+    <img src="{{pre10.img}}" alt="">
+  <p class="title_pregunta"><b> 10). </b> {{pre10.title}}</p>
+
+  <ion-radio-group value="grape"  (ionChange)="checkValue10($event)" >
+    <ion-item>
+      <small>{{pre10.p1}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre10.p1}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre10.p2}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre10.p2}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre10.p3}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre10.p3}}"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>{{pre10.p4}}</small>
+      <ion-radio slot="end" color="dark" value="{{pre10.p4}}"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+  <!-- <br>
+    <small style="color: green;" *ngIf="correcto10">Respuesta Correcta</small>
+    <small style="color: red;" *ngIf="!correcto10">Respuesta Incorrecta</small> -->
+  
+</div>
+
+<br>
+
+
+<ion-button  (click)="finalizarTarea()"   class="btn_register" fill="solid"  color="primary" expand="block" style="margin-bottom: 10px;" > <b style="color: #fff;" >Finalizar tarea</b> </ion-button>
+
+
+
+
+</ion-content>

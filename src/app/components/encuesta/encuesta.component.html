@@ -1,0 +1,66 @@
+
+<ion-header style="text-align: center; --background-color: #59A9F3!important;">
+<ion-toolbar class="center">
+  <ion-buttons class="center">
+    <ion-button slot="center" (click)="dissmis()">
+      <ion-icon name="chevron-down-outline"></ion-icon>
+      
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="card_pregunta">
+
+
+    <img src="assets/img/encuestas-por-sms.svg" alt="">
+
+    <div style="padding: 10px; text-align: center;">
+        <p style="font-size: 14px;">¿En que medida te sientes satisfecho con la gestión de tu propio aprendizaje como docente?</p>
+    </div>
+
+  <ion-radio-group value="grape" (ionChange)="checkValue($event)">
+    <ion-item>
+      <small>SIEMPRE</small>
+      <ion-radio slot="end" color="dark" value="1"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>CASI SIEMPRE</small>
+      <ion-radio slot="end" color="dark" value="2"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>A VECES</small>
+      <ion-radio slot="end" color="dark" value="3"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <small>NUNCA</small>
+      <ion-radio slot="end" color="dark" value="4"></ion-radio>
+    </ion-item>
+
+
+ 
+
+  </ion-radio-group>
+  <br>
+
+</div>
+
+
+
+<ion-header style="text-align: center; --background-color: #59A9F3!important;">
+  <ion-toolbar class="center">
+    <ion-buttons class="center">
+
+  <ion-button color="primary" fill="solid" (click)="enviarCalificacion()">
+    <ion-icon name="checkbox-outline"></ion-icon> &nbsp; Enviar encuesta
+  </ion-button>
+  
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

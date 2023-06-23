@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="footer">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <div class="center">
+      <img  class="logo_slide" src="assets/img/logo_ierp_3.png" alt="">
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content style="padding-top: 20px;">
+  <br><br>
+  
+  <ion-grid >
+  <ion-row>
+    <ion-col size="12" *ngFor="let data of respos">
+
+  <ion-card class="mt-0"  mode="md" style="background-color: #B3D7FA;" (click)="openDetails(data)" class="center">
+    <div class="p-3 text-center" >
+      <img src="assets/img/5045020.png" width="80px">
+      <p style="padding-top: 10px; font-weight: bolder;">{{data.nota}}</p>
+      <small>{{data.created | date: 'dd/MM/yyyy   HH:mm:ss'}}</small>
+    </div>
+  </ion-card>
+
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

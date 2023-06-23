@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="footer">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <div class="center">
+      <img  class="logo_slide" src="assets/img/logo_ierp_3.png" alt="">
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-list style="text-align: center;" class="text-center">
+  <ion-item style="font-size: 12px;">
+    <ion-label style="color: #2A8880; font-weight: bolder;"> CATEGORIAS: </ion-label>
+    <ion-select aria-label="Fruit" interface="action-sheet" placeholder="Seleccione" (ionChange)="seleccionarOpcion($event)"  [(ngModel)]="idCategoria" >
+      <ion-select-option value="6456a8a0771e6431247611cc">Herramientas Digitales</ion-select-option>
+      <ion-select-option value="6456a890771e6431247611cb">Portales Web Educativa</ion-select-option>
+      <ion-select-option value="6456a85f771e6431247611c8">Inteligencia Artificial</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+
+<ion-content>
+
+
+ 
+
+
+
+
+ 
+
+
+
+  <ion-item *ngFor="let data of data" style="padding: 5px;">
+    <ion-img style="width: 150px;" [src]="IMG+'herramientas/'+data.imagen" alt=""></ion-img>
+    <ion-label style="text-align: start; padding-left: 10px;">
+      <p style="color: #008F70; font-weight: bold;">{{data.categoria}}</p>
+      <h5 style="font-weight: bold;">{{data.nombre}}</h5>
+      <p class="text-wrap">{{data.descripcion}}</p>
+      <ion-button [href]="data.enlace" class="" color="primary" size="small">Visualizar <ion-icon slot="end" name="globe-outline"></ion-icon> </ion-button>
+    </ion-label>
+  </ion-item>
+
+</ion-content>

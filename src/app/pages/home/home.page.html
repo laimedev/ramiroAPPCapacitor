@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-toolbar class="footer">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <div class="center">
+      <img  class="logo_slide" src="assets/img/logo_ierp_3.png" alt="">
+    </div>
+  <ion-buttons slot="end">
+    <ion-button fill="clean" (click)="profile()" > <ion-icon color="light" name="settings-outline"></ion-icon></ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-searchbar animated (ionChange)="buscar($event)" placeholder="Buscar curso..."></ion-searchbar>
+</ion-toolbar>
+
+
+<ion-img src="assets/slides/slide_1.jpg"></ion-img>
+
+
+
+</ion-header>
+
+<ion-content>
+
+
+  <ion-grid>
+    <ion-row class="card-1">
+      <!-- <ion-col routerLink="/asistencias">
+        <ion-card class="btn-grad" data-step="5" data-intro="Aquí podras tener el registro de las asistencias." data-position='bottom' data-disable-interaction='true'>
+          <ion-icon name="qr-code-outline" class="icon_menu"></ion-icon>
+          <p>ASISTENCIAS</p>
+        </ion-card>
+      </ion-col> -->
+
+        <ion-col routerLink="/capacitaciones">
+          <ion-card class="btn-grad" data-step="4"  >
+            <ion-icon name="server-outline" class="icon_menu"></ion-icon>
+            <p>CAPACITACIONES</p>
+          </ion-card>
+        </ion-col>
+
+        
+      <ion-col>
+        <ion-card  class="btn-grad" routerLink="/repositorios" >
+          <ion-icon name="folder-outline" class="icon_menu"></ion-icon>
+          <p>REPOSITORIOS</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+
+
+  <!-- <ion-grid>
+    <ion-row class="card-1">
+      <ion-col routerLink="/capacitaciones">
+        <ion-card class="btn-grad" data-step="4"  data-intro="Aquí podras interacturar con contenido de diversión." data-position='bottom' data-disable-interaction='true'>
+          <ion-icon name="server-outline" class="icon_menu"></ion-icon>
+          <p>CAPACITACIONES</p>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card  class="btn-grad">
+          <ion-icon name="calendar-outline" class="icon_menu"></ion-icon>
+          <p>CALENDARIO</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+
+  <ion-grid>
+    <ion-row class="card-1">
+      <ion-col routerLink="/herramientas">
+        <ion-card class="btn-grad" data-step="4">
+          <ion-icon name="book-outline" class="icon_menu"></ion-icon>
+          <p>HERRAMIENTAS</p>
+        </ion-card>
+      </ion-col>
+      <ion-col routerLink="/resultados">
+        <ion-card  class="btn-grad" >
+          <ion-icon name="podium-outline" class="icon_menu"></ion-icon>
+          <p>RESULTADOS</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+ 
+
+
+
+  
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar class="footer">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" >
+
+        <!-- <ion-tab-button (click)="uiService.irA('notifications')">
+          <ion-icon name="notifications-outline"></ion-icon>
+          <p>Notificaciones</p>
+        </ion-tab-button> -->
+
+
+        <ion-tab-button color="primary">
+          <ion-icon name="home" color="primary"></ion-icon>
+          <p color="primary">Inicio</p>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="uiService.irA('profile')" data-step="3" data-intro="Aquí podras actualizar tu infomacion de contacto." data-position='bottom' data-disable-interaction='true'>
+          <ion-icon name="person-outline"></ion-icon>
+          <p>Perfil</p>
+        </ion-tab-button>
+        
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
