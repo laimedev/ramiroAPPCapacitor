@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 // import { ChartsModule } from 'ng2-charts';
 import { PipesModule } from './pipes/pipes.module';
 import { ComponentsModule } from './components/components.module';
+import { QRCodeModule } from 'angularx-qrcode';
 
 
 
@@ -26,6 +27,8 @@ import { ComponentsModule } from './components/components.module';
     // NgChartsModule.forRoot({ defaults: { ... } }),
     PipesModule,
     HttpClientModule,
+    QRCodeModule,
+    
     // NgxQRCodeModule,
     // LottieModule.forRoot({player: playerFactory}),
    ],

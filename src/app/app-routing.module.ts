@@ -55,6 +55,14 @@ const routes: Routes = [
     path: 'resultados',
     loadChildren: () => import('./pages/resultados/resultados.module').then( m => m.ResultadosPageModule)
   },
+  {
+    path: 'card-id',
+    loadChildren: () => import('./pages/card-id/card-id.module').then( m => m.CardIDPageModule)
+  },
+  {
+    path: 'calendario',
+    loadChildren: () => import('./pages/calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
 ];
 
 @NgModule({

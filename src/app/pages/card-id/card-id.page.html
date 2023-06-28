@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="footer">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <div class="center">
+      <img  class="logo_slide" src="assets/img/logo_ierp_3.png" alt="">
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content style="text-align: center;" >
+
+  <h1 style="font-weight: bold;">MI CARD ID</h1>
+
+  <!-- <ngx-qrcode [value]="code"  [width]="277" [elementType]="elementType"></ngx-qrcode> -->
+  <qrcode [qrdata]="id" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+
+
+  <h4 style="font-weight: bold;">{{user.nombre}} {{user.apellidos}}  </h4>
+  <h5> {{user.dni }}</h5>
+  <h5> {{user.email}} </h5>
+  <h5> {{user.celular}} </h5>
+
+
+  <br><br>
+
+
+
+</ion-content>
