@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { RecursosComponent } from 'src/app/components/recursos/recursos.component';
 import { ServiciosAppService } from 'src/app/services/servicios-app.service';
 import { UserServiceService } from 'src/app/services/user-service.service';
 
@@ -43,16 +44,16 @@ export class RepositoriosPage implements OnInit {
 
   
   async openDetails(data: any){
-    // const modal = await this.modalCtrl.create({
-    //     component: RecursosComponent,
-    //     componentProps: {
-    //       data: data
-    //     },
-    //     // swipeToClose: true,
-    //     animated:true,
-    //     mode:'ios',
-    // });
-    // await modal.present();
+    const modal = await this.modalCtrl.create({
+        component: RecursosComponent,
+        componentProps: {
+          data: data
+        },
+        // swipeToClose: true,
+        animated:true,
+        mode:'ios',
+    });
+    await modal.present();
   }
 
 

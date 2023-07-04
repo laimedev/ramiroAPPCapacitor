@@ -29,9 +29,13 @@ export class UnidadComponent implements OnInit {
 
     console.log(this.data);
 
+
     this.IMG = environment.cloudinary+'capacitacionesPortadas/';
     this.REC = environment.cloudinary+'capacitaciones/';
     this.UNI = environment.cloudinary+'unidades/';
+
+    console.log('RUTA DE IMAGENES');
+    console.log(this.UNI);
 
 
     if(this.data.tipo == "Curso"){
@@ -48,6 +52,7 @@ export class UnidadComponent implements OnInit {
 
   dismiss() {
     this.modalCtrl.dismiss();
+    
   }
 
 

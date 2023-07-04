@@ -42,9 +42,12 @@
             <small>Meet:  <a target="_blank" [href]="data.meet">{{data2.meet}}</a></small><br>
             <!-- <small>Tarea: {{data2.tarea}}</small><br> -->
 
-
+            <br>
             
-            <a target="_blank" [href]='UNI+data.material' style="font-size: 12px;"> <ion-icon class="folder" name="folder-open"></ion-icon> {{data2.material}}</a> <br>
+            <a target="_blank" [href]='UNI+data2.material' style="font-size: 12px;"> <ion-icon class="folder" name="folder-open"></ion-icon> {{data2.material}}</a> <br>
+
+            <br>
+
 
             <ion-button size="small"  *ngIf="data.tipo !== 'INTRODUCCION'" color="success" (click)="irSesiones(data2)"><ion-icon name="checkbox-outline"></ion-icon> &nbsp; Ir prueba</ion-button>
           </div>
