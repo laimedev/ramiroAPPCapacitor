@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="footer">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <div class="center">
+      <img  class="logo_slide" src="assets/img/logo_ierp_3.png" alt="">
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+ 
+  <div style="text-align: center; padding-top: 20px;">
+    <h5>Mi certificado</h5>
+    <br><br>
+    <img src="assets/img/certificado.gif" alt="" style="width: 250px;">
+    <br><br>
+    <br><br>
+    <ion-button color="primary" (click)="imprimir()">Obtener certificado</ion-button>
+  </div>
+</ion-content>

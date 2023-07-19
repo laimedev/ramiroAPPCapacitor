@@ -15,6 +15,7 @@ export class AppComponent {
     { title: 'Calendario', url: '/homeFake', icon: 'calendar' },
     { title: 'Herramientas', url: '/herramientas', icon: 'book' },
     { title: 'Resultados', url: '/resultados', icon: 'podium' },
+    { title: 'Certificacion', url: '/certificado', icon: 'ribbon' },
     { title: 'Configuración', url: 'homeFake', icon: 'settings' },
   ];
   public labels = [

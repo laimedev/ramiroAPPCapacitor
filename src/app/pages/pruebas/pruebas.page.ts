@@ -394,7 +394,7 @@ export class PruebasPage implements OnInit {
       // mode: 'ios',
       cssClass: 'my-custom-class',
       header: 'CONFIRMAR',
-      message: 'Esta seguro de <strong>enviar la tarea?</strong>',
+      message: 'Esta seguro de enviar la tarea?',
       buttons: [
         {
           text: 'No',

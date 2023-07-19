@@ -62,7 +62,11 @@ const routes: Routes = [
   {
     path: 'calendario',
     loadChildren: () => import('./pages/calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },  {
+    path: 'certificado',
+    loadChildren: () => import('./pages/certificado/certificado.module').then( m => m.CertificadoPageModule)
   },
+
 ];
 
 @NgModule({

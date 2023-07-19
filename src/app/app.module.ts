@@ -15,6 +15,16 @@ import { ComponentsModule } from './components/components.module';
 import { QRCodeModule } from 'angularx-qrcode';
 
 
+import { File } from '@awesome-cordova-plugins/file/ngx';
+import { FileOpener } from '@awesome-cordova-plugins/file-opener/ngx';
+
+
+import { PdfMakeWrapper } from 'pdfmake-wrapper';
+import * as pdfFonts from "pdfmake/build/vfs_fonts"; // fonts provided for pdfmake
+
+// Set the fonts to use
+PdfMakeWrapper.setFonts(pdfFonts);
+
 
 
 @NgModule({
@@ -32,7 +42,8 @@ import { QRCodeModule } from 'angularx-qrcode';
     // NgxQRCodeModule,
     // LottieModule.forRoot({player: playerFactory}),
    ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, File, FileOpener],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
